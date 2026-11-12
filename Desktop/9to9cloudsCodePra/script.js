@@ -1,10 +1,20 @@
 function welcomeCustomer() {
-    const name = document.getElementById("customerName").value;
+    const name = document.getElementById("customerName").value.trim();
+    const message = document.getElementById("message");
 
-    if (!name.trim()) {
-        alert("Please enter customer name");
+    if (!name) {
+        message.style.color = "red";
+        message.textContent = "Please enter customer name.";
         return;
     }
 
-    alert("Welcome " + name);
+    message.style.color = "green";
+    message.textContent = "Welcome, " + name + "!";
+
+    document.getElementById("customerName").value = "";
 }
+
+document.getElementById("customerForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    welcomeCustomer();
+});

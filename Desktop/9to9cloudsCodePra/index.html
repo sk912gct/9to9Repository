@@ -1,8 +1,35 @@
-<h1>Welcome to ABC CRM</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Welcome Application</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-<input type="text" id="customerName"
-       placeholder="Enter customer name">
+    <div class="container">
+        <h1>Customer Welcome Application</h1>
+        <h1>Customer Welcome Application</h1>
+        <h1>Customer Welcome Application</h1>
 
-<button onclick="welcomeCustomer()">
-    Welcome Customer
-</button>
+        <p>Enter your name to receive a welcome message.</p>
+
+        <form id="customerForm">
+            <label for="customerName">Customer Name</label>
+
+            <input
+                type="text"
+                id="customerName"
+                placeholder="Enter your name"
+            >
+
+            <button type="submit">Welcome Customer</button>
+        </form>
+
+        <div id="message" class="message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>s
